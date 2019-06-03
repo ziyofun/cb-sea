@@ -20,19 +20,19 @@ export interface IProblem {
     purpose?: 'exam' | 'practice' | 'class'
     type?: 'single_choice' | 'multi_blank' | 'hybrid' | 'exam'
     body?: string
-    explains?: Array<IExplains>
-    prompts?: Array<string>
+    explains?: IExplains[]
+    prompts?: string[]
     source?: string,
     frequency?: number,
-    choices?: Array<Array<IChoice>>
+    choices?: IChoice[][]
     difficulty?: '0' | '55' | '65' | '75' | '85' | '95'
     audioUrl?: string
     advice?: string
-    screenshots?: Array<string>
+    screenshots?: string[]
     scenes?: string,
-    tags?: Array<string>,
-    extendedBlanks?: Array<Array<string>>
-    blanksGroup?: Array<Array<number>>
+    tags?: string[],
+    extendedBlanks?: string[][]
+    blanksGroup?: number[][]
 }
 
 export class Problem extends base {

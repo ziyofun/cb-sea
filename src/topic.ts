@@ -16,7 +16,7 @@ interface ITopic {
     description?: string
     videoId?: string
     video?: IVideo
-    problemIdsGroup?: Array<Array<string>>
+    problemIdsGroup?: string[][]
 }
 
 export class Topic extends base {
