@@ -17,7 +17,8 @@
     "preversion": "npm run lint",
     "version": "npm run format && git add -A src",
     "postversion": "git push && git push --tags",
-    "release": "standard-version"
+    "release": "standard-version",
+    "public": "npm version patch && npm publish"
   },
   "keywords": [],
   "author": "",
