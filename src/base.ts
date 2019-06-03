@@ -1,10 +1,9 @@
 import request from 'request'
 
-interface IConfig {
+export interface IConfig {
     host?: string
     port?: string
 }
-
 export default class {
     public config?: any
     constructor(config?: IConfig) {
