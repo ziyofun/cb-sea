@@ -5,11 +5,11 @@ interface IConfig {
     port?: string
 }
 
-export default class  {
-    constructor(config?: IConfig){
+export default class {
+    public config?: any
+    constructor(config?: IConfig) {
         this.config = config
     }
-    public config: any
     getHttp(path: string) {
         return new Promise((resolve, reject) => {
             request.get(`${this.config.host}:${this.config.port}${path}`, (err, response, body) => {

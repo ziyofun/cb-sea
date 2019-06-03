@@ -11,7 +11,7 @@ interface ICourse {
 }
 
 export class Course extends base {
-    public async get (id: string): Promise<ICourse> {
+    public async get(id: string): Promise<ICourse> {
         return await this.getHttp(`/courses/${id}`)
     }
 }
