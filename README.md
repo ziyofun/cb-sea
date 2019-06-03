@@ -1,9 +1,10 @@
-<<<<<<< HEAD
 # 项目名
 
-cb海外版包服务
+cb海外版包
 
 ## 如何安装
+
+`npm install save course-resource-sea`
 
 ## 使用
 
@@ -13,7 +14,7 @@ cb海外版包服务
 | ------- | ------------ |
 | `test` | backstage-test.yc345.tv 测试环境 |
 | `prod` | 线上环境 |
-=======
-# course-resource-sea-package
 
->>>>>>> 19e90c0715957019a4e8f384b49c6a7780faf004
+=======
+
+# course-resource-sea-package
