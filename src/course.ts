@@ -25,7 +25,7 @@ interface ISubject {
 }
 
 interface ISubjectArray {
-    [index: number]: ISubject;
+    [index: number]: ISubject
 }
 
 export class Course extends base {
