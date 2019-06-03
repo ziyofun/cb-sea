@@ -32,6 +32,6 @@ export class Course extends base {
         return this.getHttp(`/courses/tree/${id}`)
     }
     public async getTreeStruct() {
-        return await this.getHttp('/courses/treeStruct') as ISubject[]
+        return (await this.getHttp('/courses/treeStruct')) as ISubject[]
     }
 }
