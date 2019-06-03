@@ -21,7 +21,7 @@ interface ITopic {
 
 export class Topic extends base {
     /**
-     * 
+     *
      * @param id : topic id
      * return: 知识点详情
      */
@@ -29,11 +29,11 @@ export class Topic extends base {
         return await this.getHttp(`/topics/${id}`)
     }
     /**
-     * 
+     *
      * @param id : 知识点id
      * return: 知识点下习题列表
      */
-    public async getTopicProblemList({id} : { id: string }): Promise<any> {
-        return await this.getHttp(`/topics/${id}/practices`) as IProblem[]
+    public async getTopicProblemList({ id }: { id: string }): Promise<any> {
+        return (await this.getHttp(`/topics/${id}/practices`)) as IProblem[]
     }
 }

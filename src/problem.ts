@@ -22,22 +22,22 @@ export interface IProblem {
     body?: string
     explains?: IExplains[]
     prompts?: string[]
-    source?: string,
-    frequency?: number,
+    source?: string
+    frequency?: number
     choices?: IChoice[][]
     difficulty?: '0' | '55' | '65' | '75' | '85' | '95'
     audioUrl?: string
     advice?: string
     screenshots?: string[]
-    scenes?: string,
-    tags?: string[],
+    scenes?: string
+    tags?: string[]
     extendedBlanks?: string[][]
     blanksGroup?: number[][]
 }
 
 export class Problem extends base {
     /**
-     * 
+     *
      * @param id : problem id
      * return: 习题详情
      */
@@ -45,7 +45,7 @@ export class Problem extends base {
         return await this.getHttp(`/problems/${id}`)
     }
     // /**
-    //  * 
+    //  *
     //  * @param pId : 父级id
     //  * @param courseId : 课程id
     //  * return: 习题列表

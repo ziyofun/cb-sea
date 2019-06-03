@@ -18,7 +18,7 @@ interface ILevel {
 
 export class Level extends base {
     /**
-     * 
+     *
      * @param id : level id
      * return: 层级详情
      */
@@ -26,12 +26,12 @@ export class Level extends base {
         return await this.getHttp(`/levels/${id}`)
     }
     /**
-     * 
+     *
      * @param pId : 父级id
      * @param courseId : 课程id
      * return: 层级列表
      */
-    public async getList({pId, courseId} : { pId: string, courseId: string }): Promise<any> {
-        return await this.getHttp(`/levels?${genQuery({pId, courseId})}`) as ILevel[]
+    public async getList({ pId, courseId }: { pId: string; courseId: string }): Promise<any> {
+        return (await this.getHttp(`/levels?${genQuery({ pId, courseId })}`)) as ILevel[]
     }
 }
