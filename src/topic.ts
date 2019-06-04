@@ -11,7 +11,7 @@ interface IVideo {
 interface ITopic {
     id?: string
     name?: string
-    pay?: string
+    pay?: 'free' | 'limitedTimeFree' | 'charge'
     type?: string
     description?: string
     videoId?: string

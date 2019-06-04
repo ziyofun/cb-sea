@@ -10,3 +10,4 @@ cb海外版包
 ```
     const crs = require('course-resource-sea')({config:{host:'',port:''}})
     const { course, semester, topic, stage, subject, problem, level } = crs
+    const data = await course.getTreeStruct()
