@@ -5,6 +5,7 @@ import { Topic } from './topic'
 import { Semester } from './semester'
 import { Stage } from './stage'
 import { Subject } from './subject'
+import { Video } from './video'
 
 import { IConfig } from './base'
 
@@ -17,5 +18,6 @@ export function CourseResource({ config }: { config: IConfig }) {
         topic: new Topic(config),
         problem: new Problem(config),
         semester: new Semester(config),
+        video: new Video(config),
     }
 }
