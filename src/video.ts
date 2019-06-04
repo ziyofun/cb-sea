@@ -13,6 +13,15 @@ enum VedioClarity {
     Middle = "middle",
     Low = "low"
 }
+interface IVideoUrl {
+    id: string,
+    videoId: string,
+    url: string,
+    platform: string,
+    format: VedioFormat,
+    clarity: VedioClarity,
+    md5:string
+}
 interface IVideo {
     id: string,
     originalId: string,
@@ -35,15 +44,7 @@ interface IVideo {
     subjectId: number,
     stageId: number,
     url: string,
-    urls: {
-        id: string,
-        videoId: string,
-        url: string,
-        platform: string,
-        format: VedioFormat,
-        clarity: VedioClarity,
-        md5:string
-    }[]
+    urls: IVideoUrl[]
 }
 export class Video extends base {
     /**
