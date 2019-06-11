@@ -55,7 +55,7 @@ export class Course extends base {
         semesterId: string
         type: 'system' | 'special'
     }): Promise<any> {
-        return (await this.getHttp(`/levels?${genQuery({ subjectId, stageId, semesterId, type })}`)) as ICourse[]
+        return (await this.getHttp(`/courses?${genQuery({ subjectId, stageId, semesterId, type })}`)) as ICourse[]
     }
     /**
      *
