@@ -1,6 +1,5 @@
 import base from './base'
 import { IProblem } from './problem'
-import { genQuery } from './util'
 
 interface IVideo {
     url?: string
@@ -8,7 +7,7 @@ interface IVideo {
     id?: string
 }
 
-interface ITopic {
+export interface ITopic {
     id?: string
     name?: string
     pay?: 'free' | 'limitedTimeFree' | 'charge'
