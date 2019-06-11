@@ -1,6 +1,6 @@
 import { Course } from './course'
-import { Level } from './level'
 import { Problem } from './problem'
+import { Chapter } from './chapter'
 import { Topic } from './topic'
 import { Semester } from './semester'
 import { Stage } from './stage'
@@ -12,7 +12,7 @@ import { IConfig } from './base'
 export function CourseResource({ config }: { config: IConfig }) {
     return {
         course: new Course(config),
-        level: new Level(config),
+        chapter: new Chapter(config),
         subject: new Subject(config),
         stage: new Stage(config),
         topic: new Topic(config),

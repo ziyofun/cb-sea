@@ -11,16 +11,19 @@ export default class {
     }
     getHttp(path: string) {
         return new Promise((resolve, reject) => {
-            request.get(`${this.config.host}:${this.config.port}${path}`, (err, response, body) => {
-                if (err) {
-                    return reject(err)
-                }
-                try {
-                    resolve(body)
-                } catch (e) {
-                    reject(e)
-                }
-            })
+            request.get(
+                `${this.config.host}:${this.config.port}${path}`,
+                (err: Error, response: request.Response, body: any) => {
+                    if (err) {
+                        return reject(err)
+                    }
+                    try {
+                        resolve(body)
+                    } catch (e) {
+                        reject(e)
+                    }
+                },
+            )
         })
     }
     postHttp(path: string, data: any) {
@@ -34,7 +37,7 @@ export default class {
                     },
                     body: JSON.stringify(data),
                 },
-                (err, response, body) => {
+                (err: Error, response: request.Response, body: any) => {
                     if (err) {
                         return reject(err)
                     }

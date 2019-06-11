@@ -25,7 +25,7 @@ export class Topic extends base {
      * return: 知识点详情
      */
     public async get(id: string): Promise<ITopic> {
-        return await this.getHttp(`/topics/${id}`)
+        return (await this.getHttp(`/topics/${id}`)) as ITopic
     }
     /**
      *

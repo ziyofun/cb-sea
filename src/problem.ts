@@ -42,7 +42,7 @@ export class Problem extends base {
      * return: 习题详情
      */
     public async get(id: string): Promise<IProblem> {
-        return await this.getHttp(`/problems/${id}`)
+        return (await this.getHttp(`/problems/${id}`)) as IProblem
     }
     // /**
     //  *

@@ -33,8 +33,8 @@ export class Course extends base {
      * @param id : 课程id
      *
      */
-    public get(id: string): Promise<ICourse> {
-        return this.getHttp(`/courses/${id}`)
+    public async get(id: string): Promise<ICourse> {
+        return (await this.getHttp(`/courses/${id}`)) as ICourse
     }
     /**
      *
